@@ -22,7 +22,12 @@ public class MainActivity extends AppCompatActivity {
     }
     private void Setview(){
         DeviceUnique ids=new DeviceUnique(this);
-        String text="Android id= "+ids.DeviceId()+"\nImei= "+ids.DeviceIMEI()+"";
+        String text="Android id= "+ids.DeviceId()+"\nImei= "+ids.DeviceIMEI()+"\nSim id="+ids.Device_SIM_ID()
+                +"\nSim serial= "+
+        ids.Device_SIM_serial()+"\nwifi="+
+        ids.Device_WIFI_MAC()+"Bluetooth="+
+        ids.Device_Bluetooth_MAC()+"hardware="+
+        ids.Device_HardWare_Serial()+"";
         TextView t=(TextView)findViewById(R.id.test);
         t.setText(text);
     }
