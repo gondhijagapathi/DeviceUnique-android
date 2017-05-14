@@ -18,6 +18,12 @@ Step 2. Add the dependency
 
 Usage
 
+Add Premission in Manifest
+    
+      <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+      Also dont forget RunTime permissions in >6.0.0
+
+
         DeviceUnique ids=new DeviceUnique(this);
 	
 	ids.DeviceId()
