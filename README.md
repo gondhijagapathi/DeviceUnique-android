@@ -15,3 +15,15 @@ Step 2. Add the dependency
 	dependencies {
 	        compile 'com.github.gondhijagapathi:DeviceUnique-android:1.0.0'
 	}
+
+Usage
+
+        DeviceUnique ids=new DeviceUnique(this);
+	
+	ids.DeviceId()
+	ids.DeviceIMEI()
+	ids.Device_SIM_ID()
+	ids.Device_SIM_serial()
+	ids.Device_WIFI_MAC()
+	ids.Device_Bluetooth_MAC()
+	ids.Device_HardWare_Serial()
