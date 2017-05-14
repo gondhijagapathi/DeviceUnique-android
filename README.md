@@ -23,6 +23,7 @@ Add Premission in Manifest
       <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
       Also dont forget RunTime permissions in >6.0.0
 
+And in Your Activity 
 
         DeviceUnique ids=new DeviceUnique(this);
 	
