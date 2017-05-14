@@ -1,6 +1,7 @@
 package jaggu.deviceunique.deviceunique;
 
 import android.content.Context;
+import android.os.Build;
 import android.provider.Settings;
 import android.telephony.TelephonyManager;
 
@@ -47,13 +48,8 @@ public class DeviceUnique {
 
     private String getHardwareSerial() {
         try {
-            Class<?> c = Class.forName("android.os.SystemProperties");
-            Method get = c.getMethod("get", String.class, String.class);
-            String serialNumber = (String) get.invoke(c, "sys.serialnumber", "Error");
-            if (serialNumber.equals("Error")) {
-                serialNumber = (String) get.invoke(c, "ril.serialnumber", "Error");
-            }
-            return serialNumber;
+
+            return Build.SERIAL;
         }catch (Exception e){
             e.printStackTrace();
             return "Exception";
